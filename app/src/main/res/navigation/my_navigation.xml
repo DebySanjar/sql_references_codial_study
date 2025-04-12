@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.muzik.codial.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_coursesFragment"
+            app:destination="@id/coursesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_studentFragment"
+            app:destination="@id/studentFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_groupsFragment"
+            app:destination="@id/groupsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_showMentorFragment"
+            app:destination="@id/showMentorFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/coursesFragment"
+        android:name="com.example.muzik.codial.fragments.CoursesFragment"
+        android:label="CoursesFragment"
+        tools:layout="@layout/full_fragment">
+        <action
+            android:id="@+id/action_coursesFragment_to_showMentorFragment"
+            app:destination="@id/showMentorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/groupsFragment"
+        android:name="com.example.muzik.codial.fragments.GroupsFragment"
+        android:label="GroupsFragment"
+        tools:layout="@layout/full_fragment">
+
+        <action
+            android:id="@+id/action_groupsFragment_to_groupTabContainerFragment"
+            app:destination="@id/groupTabContainerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/studentFragment"
+        android:name="com.example.muzik.codial.fragments.StudentFragment"
+        android:label="StudentFragment"
+        tools:layout="@layout/full_fragment">
+        <action
+            android:id="@+id/action_studentFragment_to_showMentorFragment"
+            app:destination="@id/showMentorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/showMentorFragment"
+        android:name="com.example.muzik.codial.fragments.ShowMentorFragment"
+        android:label="ShowMentorFragment"
+        tools:layout="@layout/show_fragment">
+
+        <argument
+            android:name="desc"
+            app:argType="string" />
+        <argument
+            android:name="courseName"
+            app:argType="string" />
+        <argument
+            android:name="sourceFragment"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_showMentorFragment_to_mentorAddFragment"
+            app:destination="@id/mentorAddFragment">
+
+            <argument
+                android:name="courseName"
+                app:argType="string" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/mentorAddFragment"
+        android:name="com.example.muzik.codial.fragments.MentorAddFragment"
+        android:label="fragment_mentor_add"
+        tools:layout="@layout/fragment_mentor_add">
+
+        <argument
+            android:name="courseName"
+            android:defaultValue=""
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/groupTabContainerFragment"
+        android:name="com.example.muzik.codial.fragments.GroupTabContainerFragment"
+        android:label="fragment_group_tab_container"
+        tools:layout="@layout/fragment_group_tab_container">
+
+        <argument
+            android:name="courseName"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_groupsFragment_to_groupTabContainerFragment"
+            app:destination="@id/groupAddFragment">
+            <argument
+                android:name="courseName"
+                app:argType="string" />
+        </action>
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/groupAddFragment"
+        tools:layout="@layout/fragment_group_add"
+        android:name="com.example.muzik.codial.fragments.GroupAddFragment"
+        android:label="GroupAddFragment">
+
+        <argument
+            android:name="courseName"
+            app:argType="string" />
+    </fragment>
+</navigation>

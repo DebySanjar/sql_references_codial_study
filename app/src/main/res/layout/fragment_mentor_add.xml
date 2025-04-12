@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragments.MentorAddFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_62sdp"
+        android:background="#FFB800"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="@dimen/_15sdp"
+        android:paddingVertical="@dimen/_3sdp">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/cname"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/_10sdp"
+            android:text="Barcha kurslar ro'yxati"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#1A4E79"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/btn_add"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_add"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:gravity="center"
+        app:boxBackgroundColor="@color/white"
+        app:boxCornerRadiusBottomEnd="@dimen/_18sdp"
+        app:boxCornerRadiusBottomStart="@dimen/_18sdp"
+        app:boxCornerRadiusTopEnd="@dimen/_18sdp"
+        app:boxCornerRadiusTopStart="@dimen/_18sdp"
+        app:boxStrokeColor="@color/ic_launcher_background"
+        app:boxStrokeWidth="@dimen/_1sdp"
+        app:boxStrokeWidthFocused="@dimen/_3sdp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etMentorName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="  Ismi va familyasi"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:layout_marginVertical="@dimen/_10sdp"
+        android:gravity="center"
+        app:boxBackgroundColor="@color/white"
+        app:boxCornerRadiusBottomEnd="@dimen/_18sdp"
+        app:boxCornerRadiusBottomStart="@dimen/_18sdp"
+        app:boxCornerRadiusTopEnd="@dimen/_18sdp"
+        app:boxCornerRadiusTopStart="@dimen/_18sdp"
+        app:boxStrokeColor="@color/ic_launcher_background"
+        app:boxStrokeWidth="@dimen/_1sdp"
+        app:boxStrokeWidthFocused="@dimen/_3sdp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etMentorFatherName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Sharifi"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:gravity="center"
+        app:boxBackgroundColor="@color/white"
+        app:boxCornerRadiusBottomEnd="@dimen/_18sdp"
+        app:boxCornerRadiusBottomStart="@dimen/_18sdp"
+        app:boxCornerRadiusTopEnd="@dimen/_18sdp"
+        app:boxCornerRadiusTopStart="@dimen/_18sdp"
+        app:boxStrokeColor="@color/ic_launcher_background"
+        app:boxStrokeWidth="@dimen/_1sdp"
+        app:boxStrokeWidthFocused="@dimen/_3sdp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etMentorPhone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Telefon raqam"
+            android:inputType="phone" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/img_2" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSaveMentor"
+        android:layout_width="@dimen/_110sdp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:layout_marginVertical="@dimen/_20sdp"
+        android:backgroundTint="#3F51B5"
+        android:padding="@dimen/_12sdp"
+        android:text="Qo'shish"
+        android:textColor="@android:color/white"
+        app:cornerRadius="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etMentorPhone" />
+
+</LinearLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragments.GroupTabContainerFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_62sdp"
+        android:background="#FFB800"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="@dimen/_15sdp"
+        android:paddingVertical="@dimen/_3sdp">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/cname"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/_10sdp"
+            android:text="Barcha kurslar ro'yxati"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#1A4E79"
+            android:textStyle="bold" />
+
+
+        <ImageView
+            android:id="@+id/btn_add"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_add"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/my_tab"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_28sdp"
+        android:layout_gravity="center"
+        android:background="#FFB800"
+        app:tabIndicatorColor="@color/white"
+        app:tabIndicatorHeight="@dimen/_3sdp"
+        app:tabSelectedTextAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:tabSelectedTextColor="@color/white"
+        app:tabTextColor="#1A4E79" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/my_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+</LinearLayout>
